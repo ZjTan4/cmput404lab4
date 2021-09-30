@@ -6,7 +6,7 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse, request, response
 from django.urls import reverse
 from django.views import generic
-'''
+
 def index(request):
     # Question 3
     #return HttpResponse("Hello World. You are now at the polls index. ")
@@ -30,7 +30,7 @@ def results(request, question_id):
     # Question 8
     question = get_object_or_404(Question, pk=question_id)
     return render(request, 'polls/results.html', {'question': question})
-'''
+
 def vote(request, question_id):
     # Question 6
     #return HttpResponse("You are voting on the question {}".format(question_id))
