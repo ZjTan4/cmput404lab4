@@ -46,7 +46,7 @@ def vote(request, question_id):
     else:
         selected_choice.votes += 1
         selected_choice.save()
-        return response.HttpResponseRedirect(reverse('results', args=(question_id,)))
+        return response.HttpResponseRedirect(reverse('polls:results', args=(question_id,)))
 
 # Question 8
 class IndexView(generic.ListView):
